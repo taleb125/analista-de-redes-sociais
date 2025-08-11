@@ -7,6 +7,10 @@ header {
     padding: 20px 0;
 }
 
+logo-da-header {
+    width: 30px;
+}
+
 .banner {
     width: 100%;
 }
@@ -16,6 +20,7 @@ header {
     font-size: 2em;
     margin: 0 0 1em;
     clear: left;
+    height: 10%;
 }
 
 .principal {
