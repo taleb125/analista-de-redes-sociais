@@ -45,7 +45,7 @@ header {
     font-style: italic;
 }
 
-.utensilios {
+.ferramentas {
     width: calc(40% - 26px);
     float: left;
     margin: 0 20px 20px 0;
