@@ -22,7 +22,7 @@ header {
 .titulo-principal {
     text-align: center;
     font-size: 2em;
-    margin: 0 0 1em;
+    margin: 0 0 1.25em;
     clear: left;
     height: 10%;
 }
@@ -164,7 +164,7 @@ main {
 }
 
 .imagem-beneficios {
-    width: 60%;
+    width: 416px;
     opacity: 1;
     transition: 400ms;
     box-shadow: 10px 10px 10px 0 #000000;
