@@ -1,7 +1,7 @@
 :root {
     --cor-principal: #003aff;
     --cor-escuro: #5a2feb82;
-    --cor-secundaria: #dd07b1;
+    --cor-secundaria: #2f148ab3;
     --cor-branco: #fbfbfb;
     --cor-azulclarinho: #00b4ff;
     --cor-preto: #090000;
@@ -219,7 +219,7 @@ footer {
     text-align: center;
     background: url("img/bg.jpg");
     padding: 40px 0;
-    background: #BBBBBB;
+    background: var(--cor-secundaria);
 }
 
 .copyright {
