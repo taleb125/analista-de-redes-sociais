@@ -314,3 +314,9 @@ img ~ p {
         width: 100%;
     }
 }
+
+.table-container {
+    display: flex; /* Use flexbox para facilitar a centralização */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente (opcional, mas boa prática) */
+}
