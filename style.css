@@ -1,3 +1,12 @@
+:root {
+    --cor-principal: #003aff;
+    --cor-escuro: #750cbc;
+    --cor-secundaria: #dd07b1;
+    --cor-branco: #fbfbfb;
+    --cor-azulclarinho: #00b4ff;
+    --cor-preto: #090000;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
