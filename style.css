@@ -1,6 +1,6 @@
 :root {
     --cor-principal: #003aff;
-    --cor-escuro: #750cbc;
+    --cor-escuro: #5a2feb82;
     --cor-secundaria: #dd07b1;
     --cor-branco: #fbfbfb;
     --cor-azulclarinho: #00b4ff;
@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: #BBBBBB;
+    background: var(--cor-escuro);
     padding: 20px 0;
 }
 
