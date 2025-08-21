@@ -108,6 +108,8 @@ nav a {
     text-decoration: underline;
 }
 
+/* ESTILIZAÇÃO DOS PRODUTOS */
+
 .produtos {
     width: 940px;
     margin: 0 auto;
@@ -124,14 +126,25 @@ nav a {
     box-sizing: border-box;
     border: 2px solid #000000;
     border-radius: 10px;
+    /* Transição para a borda */
+    transition: box-shadow 0.5s ease;
 }
 
+/* Remover a regra de hover para o border-color dourado */
 .produtos li:hover {
-    border-color: #C78C19;
+    /* border-color: #C78C19; */
+    /* Usei o box-shadow para o efeito de borda colorida e removi o border-color antigo */
+    box-shadow: 0 0 10px 5px var(--cor-principal), 0 0 20px 10px var(--cor-azulclarinho), 0 0 30px 15px var(--cor-rosa);
 }
 
 .produtos li:active {
     border-color: #088C19;
+}
+
+/* Para remover o sublinhado dos links e manter a cor */
+.produtos li a {
+    text-decoration: none;
+    color: black;
 }
 
 .produtos h2 {
