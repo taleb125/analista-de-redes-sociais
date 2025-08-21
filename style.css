@@ -5,6 +5,7 @@
     --cor-branco: #fbfbfb;
     --cor-azulclarinho: #00b4ff;
     --cor-preto: #090000;
+    --cor-rosa: #fa40eac0;
 }
 
 body {
@@ -88,10 +89,22 @@ nav a {
     font-weight: bold;
     font-size: 22px;
     text-decoration: none;
+    transition: color 0.3s ease; /* Adicionei a transição para suavizar a mudança de cor */
 }
 
-nav a:hover {
-    color: #C78C19;
+/* Regras de hover para as cores individuais */
+.menu-home a:hover {
+    color: #0000FF; /* Azul */
+    text-decoration: underline;
+}
+
+.menu-produtos a:hover {
+    color: #FFFF00; /* Amarelo */
+    text-decoration: underline;
+}
+
+.menu-contato a:hover {
+    color: #FF0000; /* Vermelho */
     text-decoration: underline;
 }
 
@@ -141,7 +154,7 @@ nav a:hover {
 }
 
 main {
-    
+
 }
 
 .beneficios {
@@ -205,6 +218,7 @@ main {
 }
 
 .form-center .input-padrao {
+    background-color: var();
     display: inline-block;
     margin: 0 0 20px;
     padding: 10px 25px;
@@ -231,7 +245,7 @@ footer {
 .enviar {
     width: 40%;
     padding: 15px 0;
-    background: orange;
+    background: var(--cor-rosa);
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -242,7 +256,7 @@ footer {
 }
 
 .enviar:hover {
-    background: darkorange;
+    background: var(--cor-rosa);
     transform: scale(1.2);
 }
 
@@ -285,23 +299,23 @@ td, th {
 /* SELETORES AVANÇADOS PARA SEREM USADOS
 
 main p {
-    background: red;
+    background: red;
 }
 
 main > p {
-    background: red; 
+    background: red; 
 }
 
 img + p { 
-    background: blue;
+    background: blue;
 }
 
 img ~ p {
-    background: yellow
+    background: yellow
 } 
 
 .principal p:not(#missao) {
-    background: orange;
+    background: orange;
 }
 
 */
@@ -309,19 +323,19 @@ img ~ p {
 @media screen and (max-width: 480px) {
     .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
         width: auto;
-    }
+}
 
-    h1 {
-        text-align: center;
-    }
+h1 {
+    text-align: center;
+}
 
-    nav {
-        position: static;
-    }
+nav {
+    position: static;
+}
 
-    .lista-beneficios, .imagem-beneficios {
-        width: 100%;
-    }
+.lista-beneficios, .imagem-beneficios {
+    width: 100%;
+}
 }
 
 .table-container {
