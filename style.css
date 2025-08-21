@@ -8,10 +8,15 @@
     --cor-rosa: #fa40eac0;
 }
 
+/* Remova a cor de fundo do body, se ela estiver aqui */
 body {
     font-family: 'Montserrat', sans-serif;
+    /* Certifique-se de que não haja "background-color" ou "background" aqui */
+}
+
+/* Adicione esta nova regra para a página de contato */
+.contato-page {
     background-color: #ffc8c8f0;
-    /* Adicionada a cor de fundo rosa claro com transparência */
 }
 
 header {
