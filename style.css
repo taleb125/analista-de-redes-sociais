@@ -14,6 +14,15 @@ body {
     /* Certifique-se de que não haja "background-color" ou "background" aqui */
 }
 
+/* Adicione este novo bloco no seu style.css, de preferência no final */
+.produtos-page {
+    background-image: url("img/grabemos-redes.sociais.avif"); /* Adicione a imagem aqui */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-attachment: fixed; /* Opcional: faz a imagem ficar parada ao rolar a página */
+}
+
 /* Adicione esta nova regra para a página de contato */
 .contato-page {
     background-color: #ffc8c8f0;
@@ -138,23 +147,28 @@ nav a {
     box-sizing: border-box;
     border: 2px solid #000000;
     border-radius: 10px;
-    /* Transição para a borda */
-    transition: box-shadow 0.5s ease, border 0.2s ease;
+    /* Transição para os efeitos */
+    transition: box-shadow 0.5s ease;
 }
 
 .produtos li:hover {
     /* Efeito de "mudar de cor" para a borda */
-    border: 2px solid transparent;
-    box-shadow: 0 0 10px 5px var(--cor-principal), 0 0 20px 10px var(--cor-azulclarinho), 0 0 30px 15px var(--cor-rosa);
+    border: 2px solid transparent; /* Torna a borda transparente */
+    box-shadow: 
+        0 0 10px 5px var(--cor-principal), 
+        0 0 20px 10px var(--cor-azulclarinho), 
+        0 0 30px 15px var(--cor-rosa),
+        0 0 40px 20px var(--cor-escuro),
+        0 0 50px 25px var(--cor-secundaria); /* Mais cores para o efeito */
 }
 
 .produtos li:active {
-    /* A borda fica verde quando clicado */
-    border: 2px solid #088C19;
-    /* Verde */
+    /* O efeito verde fica maior quando clicado */
+    border: 2px solid transparent; /* Mantém a borda transparente para o efeito */
+    box-shadow: 0 0 50px 20px #088C19; /* Verde mais forte e espalhado */
 }
 
-/* Para remover o sublinhado dos links e manter a cor */
+/* Para remover o sublinhado e manter a cor do texto */
 .produtos li a {
     text-decoration: none;
     color: black;
