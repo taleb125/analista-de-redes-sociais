@@ -37,7 +37,7 @@ header {
 }
 
 .principal {
-    padding: 3em 0;
+    padding: 5em 0;
     background: #FEFEFE;
     width: 940px;
     margin: 0 auto;
@@ -146,7 +146,7 @@ main {
 
 .beneficios {
     padding: 3em 0;
-    background: #888888;
+    background: #ffc8c8f0;
 }
 
 .conteudo-beneficios {
@@ -272,7 +272,7 @@ td, th {
 }
 
 .mapa-conteudo {
-    width: 940px;
+    width: fit-content;
     margin: 0 auto;
 }
 
