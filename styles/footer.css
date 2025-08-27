@@ -1,0 +1,12 @@
+footer {
+    text-align: center;
+    background: url("img/bg.jpg");
+    padding: 40px 0;
+    background: var(--cor-secundaria);
+}
+
+.copyright {
+    color: #000000;
+    font-size: 16px;
+    margin: 20px 0 0;
+}

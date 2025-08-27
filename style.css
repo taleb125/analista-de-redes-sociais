@@ -1,3 +1,6 @@
+@import url(/styles/header.css);
+@import url(/styles/footer.css);
+
 :root {
     --cor-principal: #003aff;
     --cor-escuro: #5a2feb82;
@@ -26,19 +29,6 @@ body {
 /* Adicione esta nova regra para a página de contato */
 .contato-page {
     background-color: #ffc8c8f0;
-}
-
-header {
-    background: var(--cor-escuro);
-    padding: 20px 0;
-}
-
-.logo-da-header {
-    width: 20vw;
-}
-
-.logo-Branco {
-    width: 20vw;
 }
 
 .banner {
@@ -81,33 +71,6 @@ header {
 
 .imagembeneficios {
     width: 60%;
-}
-
-.caixa {
-    position: relative;
-    width: 940px;
-    margin: 0 auto;
-}
-
-nav {
-    position: absolute;
-    top: 110px;
-    right: 0;
-}
-
-nav li {
-    display: inline;
-    margin: 0 0 0 15px;
-}
-
-nav a {
-    text-transform: uppercase;
-    color: #000000;
-    font-weight: bold;
-    font-size: 22px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    /* Adicionei a transição para suavizar a mudança de cor */
 }
 
 /* Regras de hover para as cores individuais */
@@ -267,19 +230,6 @@ main {}
     margin: 20px 0;
 }
 
-footer {
-    text-align: center;
-    background: url("img/bg.jpg");
-    padding: 40px 0;
-    background: var(--cor-secundaria);
-}
-
-.copyright {
-    color: #000000;
-    font-size: 16px;
-    margin: 20px 0 0;
-}
-
 .enviar {
     width: 40%;
     padding: 15px 0;
@@ -371,10 +321,6 @@ img ~ p {
 
     h1 {
         text-align: center;
-    }
-
-    nav {
-        position: static;
     }
 
     .lista-beneficios,
