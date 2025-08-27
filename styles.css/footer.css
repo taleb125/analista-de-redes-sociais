@@ -1,8 +1,7 @@
 footer {
     text-align: center;
-    background: url("img/bg.jpg");
-    padding: 40px 0;
     background: var(--cor-secundaria);
+    padding: 40px 0;
 }
 
 .copyright {

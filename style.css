@@ -1,6 +1,3 @@
-@import url(/styles/header.css);
-@import url(/styles/footer.css);
-
 :root {
     --cor-principal: #003aff;
     --cor-escuro: #5a2feb82;
@@ -11,37 +8,43 @@
     --cor-rosa: #fa40eac0;
 }
 
-/* Remova a cor de fundo do body, se ela estiver aqui */
+/* Base Style */
 body {
     font-family: 'Montserrat', sans-serif;
-    /* Certifique-se de que não haja "background-color" ou "background" aqui */
+    margin: 0;
 }
 
-/* Adicione este novo bloco no seu style.css, de preferência no final */
+/* Page-specific backgrounds */
 .produtos-page {
-    background-image: url("img/grabemos-redes.sociais.avif"); /* Adicione a imagem aqui */
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    background-position: center; /* Centraliza a imagem no fundo */
-    background-attachment: fixed; /* Opcional: faz a imagem ficar parada ao rolar a página */
+    background-image: url("img/grabemos-redes.sociais.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-/* Adicione esta nova regra para a página de contato */
 .contato-page {
     background-color: #ffc8c8f0;
 }
 
+/* Header and Navigation */
+
+.menu-home a:hover {
+    color: #0000FF; /* Azul */
+}
+
+.menu-produtos a:hover {
+    color: #FFFF00; /* Amarelo */
+}
+
+.menu-contato a:hover {
+    color: #FF0000; /* Vermelho */
+}
+
+/* Main Content and Sections */
 .banner {
     width: 100%;
     height: 450px;
-}
-
-.titulo-principal {
-    text-align: center;
-    font-size: 2em;
-    margin: 0 0 1.25em;
-    clear: left;
-    height: 10%;
 }
 
 .principal {
@@ -49,6 +52,13 @@ body {
     background: #FEFEFE;
     width: 940px;
     margin: 0 auto;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1.25em;
+    clear: left;
 }
 
 .principal p {
@@ -73,27 +83,7 @@ body {
     width: 60%;
 }
 
-/* Regras de hover para as cores individuais */
-.menu-home a:hover {
-    color: #0000FF;
-    /* Azul */
-    text-decoration: underline;
-}
-
-.menu-produtos a:hover {
-    color: #FFFF00;
-    /* Amarelo */
-    text-decoration: underline;
-}
-
-.menu-contato a:hover {
-    color: #FF0000;
-    /* Vermelho */
-    text-decoration: underline;
-}
-
-/* ESTILIZAÇÃO DOS PRODUTOS */
-
+/* Products Section */
 .produtos {
     width: 940px;
     margin: 0 auto;
@@ -110,29 +100,25 @@ body {
     box-sizing: border-box;
     border: 2px solid #000000;
     border-radius: 10px;
-    /* Transição para os efeitos */
-    transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease, border-color 0.5s ease;
 }
 
 .produtos li:hover {
-    /* Efeito de "mudar de cor" para a borda */
-    border: 2px solid transparent; /* Torna a borda transparente */
+    border-color: transparent;
     box-shadow: 
         0 0 10px 5px var(--cor-principal), 
         0 0 20px 10px var(--cor-azulclarinho), 
         0 0 30px 15px var(--cor-rosa),
         0 0 40px 20px var(--cor-escuro),
-        0 0 50px 25px var(--cor-secundaria); /* Mais cores para o efeito */
+        0 0 50px 25px var(--cor-secundaria);
 }
 
 .produtos li:active {
-    /* O efeito verde fica maior quando clicado */
-    border: 2px solid transparent; /* Mantém a borda transparente para o efeito */
-    box-shadow: 0 0 50px 20px #088C19; /* Verde mais forte e espalhado */
+    border-color: transparent;
+    box-shadow: 0 0 50px 20px #088C19;
 }
 
-/* Para remover o sublinhado e manter a cor do texto */
-.produtos li a {
+.produtos a {
     text-decoration: none;
     color: black;
 }
@@ -156,74 +142,25 @@ body {
     margin-top: 10px;
 }
 
-main {}
-
-.beneficios {
-    padding: 3em 0;
-    background: #ffc8c8f0;
-}
-
-.conteudo-beneficios {
-    width: 640px;
-    margin: 0 auto;
-}
-
-.lista-beneficios {
-    width: 40%;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.itens {
-    line-height: 1.5;
-}
-
-.itens:first-child {
-    font-weight: bold;
-}
-
-.itens:before {
-    content: "✓";
-}
-
-.imagem-beneficios {
-    width: 416px;
-    opacity: 1;
-    transition: 400ms;
-    box-shadow: 10px 10px 10px 0 #1f0643
-}
-
-.imagem-beneficios {
-    opacity: 0.8;
-}
-
+/* Contact Form */
 .form-center {
     max-width: 600px;
     margin: 40px auto;
     padding: 30px;
-    width: 100%;
 }
 
-.form-center label,
-.form-center legend {
+.form-center label, .form-center legend {
     display: block;
     font-size: 16px;
     margin: 0 0 10px;
 }
 
-.form-center input {
-    display: inline-block;
-    margin: 0 0 20px;
-    padding: 10px 25px;
-    width: auto;
-}
-
-.form-center .input-padrao {
-    background-color: var();
-    display: inline-block;
-    margin: 0 0 20px;
-    padding: 10px 25px;
+.input-padrao {
+    display: block;
     width: 100%;
+    padding: 10px 25px;
+    margin: 0 0 20px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
 }
 
 .checkbox {
@@ -244,8 +181,14 @@ main {}
 }
 
 .enviar:hover {
-    background: var(--cor-rosa);
     transform: scale(1.2);
+}
+
+/* Table */
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 table {
@@ -258,15 +201,15 @@ thead {
     font-weight: bold;
 }
 
-td,
-th {
+td, th {
     border: 1px solid #000000;
     padding: 8px 15px;
 }
 
+/* Map and Video */
 .mapa {
     padding: 3em 0;
-    background-color: linear-gradient(#FEFEFE, #888888);
+    background: linear-gradient(#FEFEFE, #888888);
 }
 
 .mapa p {
@@ -284,33 +227,8 @@ th {
     margin: 2em auto;
 }
 
-
-/* SELETORES AVANÇADOS PARA SEREM USADOS
-
-main p {
-    background: red;
-}
-
-main > p {
-    background: red; 
-}
-
-img + p { 
-    background: blue;
-}
-
-img ~ p {
-    background: yellow
-} 
-
-.principal p:not(#missao) {
-    background: orange;
-}
-
-*/
-
+/* Responsive Design */
 @media screen and (max-width: 480px) {
-
     .caixa,
     .principal,
     .conteudo-beneficios,
@@ -323,17 +241,19 @@ img ~ p {
         text-align: center;
     }
 
+    nav {
+        position: static;
+        text-align: center;
+        display: block;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
     .lista-beneficios,
     .imagem-beneficios {
         width: 100%;
     }
-}
-
-.table-container {
-    display: flex;
-    /* Use flexbox para facilitar a centralização */
-    justify-content: center;
-    /* Centraliza o conteúdo horizontalmente */
-    align-items: center;
-    /* Centraliza o conteúdo verticalmente (opcional, mas boa prática) */
 }

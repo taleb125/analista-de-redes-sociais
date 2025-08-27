@@ -1,0 +1,34 @@
+.beneficios {
+    padding: 3em 0;
+    background: #ffc8c8f0;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+.itens:before {
+    content: "✓ ";
+}
+
+.imagem-beneficios {
+    width: 416px;
+    opacity: 0.8;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px 0 #1f0643;
+}
