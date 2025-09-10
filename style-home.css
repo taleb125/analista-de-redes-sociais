@@ -10,13 +10,6 @@ body {}
 	padding: 6em 0;
 }
 
-.logo {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-size: 25px;
-}
-
 .titulo-principal {
 	padding-left: 20px;
 	height: 15vw;

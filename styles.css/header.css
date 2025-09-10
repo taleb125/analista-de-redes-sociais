@@ -1,0 +1,56 @@
+header {
+    background: var(--cor-escuro);
+    padding: 20px 0;
+}
+
+.logo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 25px;
+}
+
+.logo-da-header {
+    width: 20vw;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    /* Adicionei a transição para suavizar a mudança de cor */
+}
+
+/* Estilização para Tablets (telas médias)    */
+@media screen and (min-width: 480px) {
+    #nome_empresa {
+        display: flex;
+    }    
+}
+
+@media screen and (min-width: 645px) {
+    nav ul {
+        display: inline;
+    }
+    
+}
+/* Estilização para Desktop (telas maiores)   */
+@media screen and (min-width: 1080px) {
+    .caixa {
+        width: 940px;
+    }
+}
