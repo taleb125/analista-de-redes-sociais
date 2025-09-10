@@ -8,50 +8,42 @@
     --cor-rosa: #fa40eac0;
 }
 
-/* Base Style */
+/* Remova a cor de fundo do body, se ela estiver aqui */
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
+    /* Certifique-se de que não haja "background-color" ou "background" aqui */
 }
 
-/* Page-specific backgrounds */
+/* Adicione este novo bloco no seu style.css, de preferência no final */
 .produtos-page {
-    background-image: url("img/grabemos-redes.sociais.avif");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+    background-image: url("img/grabemos-redes.sociais.avif"); /* Adicione a imagem aqui */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-attachment: fixed; /* Opcional: faz a imagem ficar parada ao rolar a página */
 }
 
+/* Adicione esta nova regra para a página de contato */
 .contato-page {
     background-color: #ffc8c8f0;
 }
 
-/* Header and Navigation */
-
-.menu-home a:hover {
-    color: #0000FF; /* Azul */
+header {
+    background: var(--cor-escuro);
+    padding: 20px 0;
 }
 
-.menu-produtos a:hover {
-    color: #FFFF00; /* Amarelo */
+.logo-da-header {
+    width: 20vw;
 }
 
-.menu-contato a:hover {
-    color: #FF0000; /* Vermelho */
+.logo-Branco {
+    width: 20vw;
 }
 
-/* Main Content and Sections */
 .banner {
     width: 100%;
     height: 450px;
-}
-
-.principal {
-    padding: 5em 0;
-    background: #FEFEFE;
-    width: 940px;
-    margin: 0 auto;
 }
 
 .titulo-principal {
@@ -59,6 +51,14 @@ body {
     font-size: 2em;
     margin: 0 0 1.25em;
     clear: left;
+    height: 10%;
+}
+
+.principal {
+    padding: 5em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .principal p {
@@ -83,7 +83,54 @@ body {
     width: 60%;
 }
 
-/* Products Section */
+.caixa {
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    /* Adicionei a transição para suavizar a mudança de cor */
+}
+
+/* Regras de hover para as cores individuais */
+.menu-home a:hover {
+    color: #0000FF;
+    /* Azul */
+    text-decoration: underline;
+}
+
+.menu-produtos a:hover {
+    color: #FFFF00;
+    /* Amarelo */
+    text-decoration: underline;
+}
+
+.menu-contato a:hover {
+    color: #FF0000;
+    /* Vermelho */
+    text-decoration: underline;
+}
+
+/* ESTILIZAÇÃO DOS PRODUTOS */
+
 .produtos {
     width: 940px;
     margin: 0 auto;
@@ -100,25 +147,29 @@ body {
     box-sizing: border-box;
     border: 2px solid #000000;
     border-radius: 10px;
-    transition: box-shadow 0.5s ease, border-color 0.5s ease;
+    /* Transição para os efeitos */
+    transition: box-shadow 0.5s ease;
 }
 
 .produtos li:hover {
-    border-color: transparent;
+    /* Efeito de "mudar de cor" para a borda */
+    border: 2px solid transparent; /* Torna a borda transparente */
     box-shadow: 
         0 0 10px 5px var(--cor-principal), 
         0 0 20px 10px var(--cor-azulclarinho), 
         0 0 30px 15px var(--cor-rosa),
         0 0 40px 20px var(--cor-escuro),
-        0 0 50px 25px var(--cor-secundaria);
+        0 0 50px 25px var(--cor-secundaria); /* Mais cores para o efeito */
 }
 
 .produtos li:active {
-    border-color: transparent;
-    box-shadow: 0 0 50px 20px #088C19;
+    /* O efeito verde fica maior quando clicado */
+    border: 2px solid transparent; /* Mantém a borda transparente para o efeito */
+    box-shadow: 0 0 50px 20px #088C19; /* Verde mais forte e espalhado */
 }
 
-.produtos a {
+/* Para remover o sublinhado e manter a cor do texto */
+.produtos li a {
     text-decoration: none;
     color: black;
 }
@@ -142,29 +193,91 @@ body {
     margin-top: 10px;
 }
 
-/* Contact Form */
+main {}
+
+.beneficios {
+    padding: 3em 0;
+    background: #ffc8c8f0;
+}
+
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+.itens:before {
+    content: "✓";
+}
+
+.imagem-beneficios {
+    width: 416px;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 10px 10px 10px 0 #1f0643
+}
+
+.imagem-beneficios {
+    opacity: 0.8;
+}
+
 .form-center {
     max-width: 600px;
     margin: 40px auto;
     padding: 30px;
+    width: 100%;
 }
 
-.form-center label, .form-center legend {
+.form-center label,
+.form-center legend {
     display: block;
     font-size: 16px;
     margin: 0 0 10px;
 }
 
-.input-padrao {
-    display: block;
-    width: 100%;
-    padding: 10px 25px;
+.form-center input {
+    display: inline-block;
     margin: 0 0 20px;
-    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    padding: 10px 25px;
+    width: auto;
+}
+
+.form-center .input-padrao {
+    background-color: var();
+    display: inline-block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 100%;
 }
 
 .checkbox {
     margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    background: url("img/bg.jpg");
+    padding: 40px 0;
+    background: var(--cor-secundaria);
+}
+
+.copyright {
+    color: #000000;
+    font-size: 16px;
+    margin: 20px 0 0;
 }
 
 .enviar {
@@ -181,14 +294,8 @@ body {
 }
 
 .enviar:hover {
+    background: var(--cor-rosa);
     transform: scale(1.2);
-}
-
-/* Table */
-.table-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 table {
@@ -201,15 +308,15 @@ thead {
     font-weight: bold;
 }
 
-td, th {
+td,
+th {
     border: 1px solid #000000;
     padding: 8px 15px;
 }
 
-/* Map and Video */
 .mapa {
     padding: 3em 0;
-    background: linear-gradient(#FEFEFE, #888888);
+    background-color: linear-gradient(#FEFEFE, #888888);
 }
 
 .mapa p {
@@ -227,8 +334,33 @@ td, th {
     margin: 2em auto;
 }
 
-/* Responsive Design */
+
+/* SELETORES AVANÇADOS PARA SEREM USADOS
+
+main p {
+    background: red;
+}
+
+main > p {
+    background: red; 
+}
+
+img + p { 
+    background: blue;
+}
+
+img ~ p {
+    background: yellow
+} 
+
+.principal p:not(#missao) {
+    background: orange;
+}
+
+*/
+
 @media screen and (max-width: 480px) {
+
     .caixa,
     .principal,
     .conteudo-beneficios,
@@ -243,17 +375,19 @@ td, th {
 
     nav {
         position: static;
-        text-align: center;
-        display: block;
-    }
-
-    nav li {
-        display: block;
-        margin: 10px 0;
     }
 
     .lista-beneficios,
     .imagem-beneficios {
         width: 100%;
     }
+}
+
+.table-container {
+    display: flex;
+    /* Use flexbox para facilitar a centralização */
+    justify-content: center;
+    /* Centraliza o conteúdo horizontalmente */
+    align-items: center;
+    /* Centraliza o conteúdo verticalmente (opcional, mas boa prática) */
 }
