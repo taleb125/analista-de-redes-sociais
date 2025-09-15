@@ -8,37 +8,17 @@
     --cor-rosa: #fa40eac0;
 }
 
-/* Remova a cor de fundo do body, se ela estiver aqui */
+/* Body */
 body {
     font-family: 'Montserrat', sans-serif;
-    /* Certifique-se de que não haja "background-color" ou "background" aqui */
+    /* Removido background-color para evitar conflito */
 }
 
-/* Adicione este novo bloco no seu style.css, de preferência no final */
-.produtos-page {
-    background-image: url("img/grabemos-redes.sociais.avif"); /* Adicione a imagem aqui */
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
-    background-repeat: no-repeat; /* Evita que a imagem se repita */
-    background-position: center; /* Centraliza a imagem no fundo */
-    background-attachment: fixed; /* Opcional: faz a imagem ficar parada ao rolar a página */
-}
-
-/* Adicione esta nova regra para a página de contato */
-.contato-page {
-    background-color: #ffc8c8f0;
-}
-
-header {
-    background: var(--cor-escuro);
-    padding: 20px 0;
-}
-
-.logo-da-header {
-    width: 20vw;
-}
-
-.logo-Branco {
-    width: 20vw;
+/* Banner */
+#banner {
+    width: 100%;
+    /* Corrigido height: "5em 0" inválido para apenas 5em */
+    height: 5em;
 }
 
 .banner {
@@ -46,23 +26,17 @@ header {
     height: 450px;
 }
 
-.titulo-principal {
-    text-align: center;
-    font-size: 2em;
-    margin: 0 0 1.25em;
-    clear: left;
-    height: 10%;
-}
-
+/* Principal */
 .principal {
-    padding: 5em 0;
-    background: #FEFEFE;
+    background: #FEFEFE; /* Prioridade para o branco do segundo style */
+    padding: 5em 0; /* Prioridade para 5em do segundo style */
     width: 940px;
     margin: 0 auto;
 }
 
 .principal p {
     margin: 0 0 1em;
+    text-align: center; /* Mantido do primeiro style */
 }
 
 .principal strong {
@@ -73,22 +47,115 @@ header {
     font-style: italic;
 }
 
+/* Logo */
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+}
+
+.logo-da-header,
+.logo-Branco {
+    width: 20vw;
+}
+
+/* Títulos */
+.titulo-principal {
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1.25em;
+    clear: left;
+    height: 10%;
+    padding-left: 20px; /* Mantido do primeiro style */
+    height: 15vw; /* Mantido do primeiro style, mas pode conflitar com 10% */
+}
+
+.titulo-centralizado {
+    text-align: center;
+}
+
+/* Parágrafos */
+p {
+    text-align: center;
+}
+
+/* Missão */
+#missao {
+    font-size: 20px;
+}
+
+/* Emphasis */
+em strong {
+    color: #a800a86f;
+}
+
+/* Itens */
+.itens {
+    font-style: italic;
+    line-height: 1.5; /* Prioridade para 1.5 do segundo style */
+}
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+.itens:before {
+    content: "✓";
+}
+
+/* Benefícios */
+.beneficios {
+    background: #ffc8c8f0; /* Prioridade para cor do segundo style */
+    padding: 3em 0;
+}
+
+.beneficios ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.imagem-beneficios,
+.imagem-beneficios {
+    width: 416px;
+    opacity: 0.8; /* Prioridade para 0.8 */
+    transition: 400ms;
+    box-shadow: 10px 10px 10px 0 #1f0643;
+}
+
+/* Ferramentas */
 .ferramentas {
     width: calc(40% - 26px);
     float: left;
     margin: 0 20px 20px 0;
 }
 
-.imagembeneficios {
-    width: 60%;
-}
-
+/* Caixa */
 .caixa {
     position: relative;
     width: 940px;
     margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
+/* Header */
+header {
+    background: var(--cor-escuro);
+    padding: 20px 0;
+}
+
+/* Navegação */
 nav {
     position: absolute;
     top: 110px;
@@ -107,29 +174,31 @@ nav a {
     font-size: 22px;
     text-decoration: none;
     transition: color 0.3s ease;
-    /* Adicionei a transição para suavizar a mudança de cor */
 }
 
-/* Regras de hover para as cores individuais */
 .menu-home a:hover {
     color: #0000FF;
-    /* Azul */
     text-decoration: underline;
 }
 
 .menu-produtos a:hover {
     color: #FFFF00;
-    /* Amarelo */
     text-decoration: underline;
 }
 
 .menu-contato a:hover {
     color: #FF0000;
-    /* Vermelho */
     text-decoration: underline;
 }
 
-/* ESTILIZAÇÃO DOS PRODUTOS */
+/* Produtos */
+.produtos-page {
+    background-image: url("img/grabemos-redes.sociais.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
 
 .produtos {
     width: 940px;
@@ -147,28 +216,24 @@ nav a {
     box-sizing: border-box;
     border: 2px solid #000000;
     border-radius: 10px;
-    /* Transição para os efeitos */
     transition: box-shadow 0.5s ease;
 }
 
 .produtos li:hover {
-    /* Efeito de "mudar de cor" para a borda */
-    border: 2px solid transparent; /* Torna a borda transparente */
-    box-shadow: 
-        0 0 10px 5px var(--cor-principal), 
-        0 0 20px 10px var(--cor-azulclarinho), 
+    border: 2px solid transparent;
+    box-shadow:
+        0 0 10px 5px var(--cor-principal),
+        0 0 20px 10px var(--cor-azulclarinho),
         0 0 30px 15px var(--cor-rosa),
         0 0 40px 20px var(--cor-escuro),
-        0 0 50px 25px var(--cor-secundaria); /* Mais cores para o efeito */
+        0 0 50px 25px var(--cor-secundaria);
 }
 
 .produtos li:active {
-    /* O efeito verde fica maior quando clicado */
-    border: 2px solid transparent; /* Mantém a borda transparente para o efeito */
-    box-shadow: 0 0 50px 20px #088C19; /* Verde mais forte e espalhado */
+    border: 2px solid transparent;
+    box-shadow: 0 0 50px 20px #088C19;
 }
 
-/* Para remover o sublinhado e manter a cor do texto */
 .produtos li a {
     text-decoration: none;
     color: black;
@@ -193,47 +258,16 @@ nav a {
     margin-top: 10px;
 }
 
+/* Main */
 main {}
 
-.beneficios {
-    padding: 3em 0;
-    background: #ffc8c8f0;
-}
-
+/* Conteúdo benefícios */
 .conteudo-beneficios {
     width: 640px;
     margin: 0 auto;
 }
 
-.lista-beneficios {
-    width: 40%;
-    display: inline-block;
-    vertical-align: top;
-}
-
-.itens {
-    line-height: 1.5;
-}
-
-.itens:first-child {
-    font-weight: bold;
-}
-
-.itens:before {
-    content: "✓";
-}
-
-.imagem-beneficios {
-    width: 416px;
-    opacity: 1;
-    transition: 400ms;
-    box-shadow: 10px 10px 10px 0 #1f0643
-}
-
-.imagem-beneficios {
-    opacity: 0.8;
-}
-
+/* Formulário */
 .form-center {
     max-width: 600px;
     margin: 40px auto;
@@ -256,7 +290,7 @@ main {}
 }
 
 .form-center .input-padrao {
-    background-color: var();
+    /* background-color: var();  Removido pois está incompleto */
     display: inline-block;
     margin: 0 0 20px;
     padding: 10px 25px;
@@ -267,11 +301,12 @@ main {}
     margin: 20px 0;
 }
 
+/* Footer */
 footer {
     text-align: center;
-    background: url("img/bg.jpg");
-    padding: 40px 0;
     background: var(--cor-secundaria);
+    padding: 40px 0;
+    /* background: url("img/bg.jpg");  Removido para evitar sobrescrever cor */
 }
 
 .copyright {
@@ -280,6 +315,7 @@ footer {
     margin: 20px 0 0;
 }
 
+/* Botão enviar */
 .enviar {
     width: 40%;
     padding: 15px 0;
@@ -298,6 +334,7 @@ footer {
     transform: scale(1.2);
 }
 
+/* Tabela */
 table {
     margin: 20px 0 40px;
 }
@@ -314,9 +351,11 @@ th {
     padding: 8px 15px;
 }
 
+/* Mapa */
 .mapa {
     padding: 3em 0;
-    background-color: linear-gradient(#FEFEFE, #888888);
+    /* background-color: linear-gradient(#FEFEFE, #888888);  linear-gradient não é válido para background-color */
+    background: linear-gradient(#FEFEFE, #888888);
 }
 
 .mapa p {
@@ -329,38 +368,14 @@ th {
     margin: 0 auto;
 }
 
+/* Vídeo */
 .video {
     width: 560px;
     margin: 2em auto;
 }
 
-
-/* SELETORES AVANÇADOS PARA SEREM USADOS
-
-main p {
-    background: red;
-}
-
-main > p {
-    background: red; 
-}
-
-img + p { 
-    background: blue;
-}
-
-img ~ p {
-    background: yellow
-} 
-
-.principal p:not(#missao) {
-    background: orange;
-}
-
-*/
-
+/* Responsividade */
 @media screen and (max-width: 480px) {
-
     .caixa,
     .principal,
     .conteudo-beneficios,
@@ -383,11 +398,9 @@ img ~ p {
     }
 }
 
+/* Container para tabela centralizada */
 .table-container {
     display: flex;
-    /* Use flexbox para facilitar a centralização */
     justify-content: center;
-    /* Centraliza o conteúdo horizontalmente */
     align-items: center;
-    /* Centraliza o conteúdo verticalmente (opcional, mas boa prática) */
 }
